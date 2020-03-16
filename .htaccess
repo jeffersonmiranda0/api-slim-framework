@@ -1,6 +1,6 @@
-# Redirect to front controller
 RewriteEngine On
-# RewriteBase /
-RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ src/index.php [QSA,L]
+
+AllowOverride All

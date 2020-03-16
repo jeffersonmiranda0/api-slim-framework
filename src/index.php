@@ -7,9 +7,17 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $app = AppFactory::create();
 
-$app->get('/teste', function (Request $request, Response $response, $args) {
-    $response->getBody()->write("Hello world!");
+// Add Routing Middleware
+//$app->addRoutingMiddleware();
+
+//$errorMiddleware = $app->addErrorMiddleware(false, false, false);
+
+// Define app routes
+$app->get('/hello/{name}', function (Request $request, Response $response, $args) {
+    $name = $args['name'];
+    $response->getBody()->write("Hello, $name");
     return $response;
 });
 
+// Run app
 $app->run();
