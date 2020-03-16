@@ -1,0 +1,14 @@
+{
+  "name": "jefferson/api-slim-framework",
+  "license": "mit",
+  "authors": [
+    {
+      "name": "Jefferson Miranda",
+      "email": "jeffersonmiranda0@gmail.com"
+    }
+  ],
+  "require": {
+    "slim/slim": "4.*",
+    "slim/psr7": "^1.0"
+  }
+}
